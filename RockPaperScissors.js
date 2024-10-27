@@ -10,26 +10,12 @@ getComputerChoice()
 
 
 function getHumanChoice () {
-// Get user input from a prompt  
-// Store value from the prompt in a variable
     let input = prompt("Enter your guess here!");
     let returnVal = ""
-// Check if the inputted value is valid
-// Return value if it is valid
-      if (input == "rock") {
-        returnVal = "rock"
-      }
-      else if (input == "paper") {
-        returnVal = "paper"
-      } 
-      else if (input == "scissors") {
-        returnVal = "scissors"
-      }
-      else {
-        returnVal = "Please enter valid guess!"
-      }
-
-// Print returned value
+      if (input == "rock") {returnVal = "rock"}
+       else if (input == "paper") {returnVal = "paper"} 
+        else if (input == "scissors") {returnVal = "scissors"}
+         else {returnVal = "Please enter valid guess!"}
     console.log(returnVal);
 }
 getHumanChoice();
