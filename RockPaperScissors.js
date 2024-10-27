@@ -7,3 +7,17 @@ function getComputerChoice() {
     console.log(returnVal);
 }
 getComputerChoice()
+
+
+function getHumanChoice () {
+// Get user input from a prompt
+
+// Store value from the prompt in a variable
+
+// Check if the inputted value is valid
+
+// Return value if it is valid
+
+// Print returned value
+
+}
