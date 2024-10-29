@@ -10,11 +10,10 @@ function getComputerChoice() {
         if (ranNumb == 2) {returnVal = "scissors"};
     console.log(returnVal);
 }
-getComputerChoice()
 
 
-function getHumanChoice () {
-    let input = prompt("Enter your guess here!");
+function getHumanChoice() {
+    let input = prompt("Enter your guess here!").toLowerCase();
     let returnVal = ""
       if (input == "rock") {returnVal = "rock"}
        else if (input == "paper") {returnVal = "paper"} 
@@ -22,4 +21,3 @@ function getHumanChoice () {
          else {returnVal = "Please enter valid guess!"}
     console.log(returnVal);
 }
-getHumanChoice();
