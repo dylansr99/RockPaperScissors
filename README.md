@@ -21,5 +21,11 @@ Return value if it is valid
 Print returned value
 
 
+play round function
+
+Make human choice input case-sensitive so that the whole string is outputted in lowercase even if the input is not
+Determine the winner 
+Print message of whether human user won or didnt win
+Increment either human or computer score based on who won
 
                                                                                                                                    
