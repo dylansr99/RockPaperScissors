@@ -29,31 +29,15 @@ function playRound(humanChoice, computerChoice) {
     let result = "";
     let output = "";
 
-    if (humanChoice == "rock" && computerChoice == "paper") {
-        result = "computerWin"
-    }
-    else if (humanChoice == "scissors" && computerChoice == "rock") {
-        result = "computerWin"
-    }
-    else if (humanChoice == "paper" && computerChoice == "rock") {
-        result = "computerWin"
-    }
-    else if (humanChoice == "rock" && computerChoice == "scissors") {
-        result = "humanWin"
-    }
-    else if (humanChoice == "scissors" && computerChoice == "paper") {
-        result = "humanWin"
-    }
-    else if (humanChoice == "paper" && computerChoice == "rock") {
-        result == "humanWin"
-    }
+    if (humanChoice == "rock" && computerChoice == "paper") {result = "computerWin"}
+     else if (humanChoice == "scissors" && computerChoice == "rock") {result = "computerWin"}
+      else if (humanChoice == "paper" && computerChoice == "rock") {result = "computerWin"}
+       else if (humanChoice == "rock" && computerChoice == "scissors") {result = "humanWin"}
+        else if (humanChoice == "scissors" && computerChoice == "paper") {result = "humanWin"}
+         else if (humanChoice == "paper" && computerChoice == "rock") {result == "humanWin"}
 
-    if (result == "computerWin") {
-        output = `You lost! ${computerChoice} beats ${humanChoice}`
-    }
-    else if (result == "humanWin") {
-        output = `You won! ${humanChoice} beats ${computerChoice}`
-    }
+    if (result == "computerWin") {output = `You lost! ${computerChoice} beats ${humanChoice}`}
+     else if (result == "humanWin") {output = `You won! ${humanChoice} beats ${computerChoice}`}
 
     console.log(output)
    
