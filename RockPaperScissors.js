@@ -1,7 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
-
 function getComputerChoice() {
     let ranNumb = Math.floor(Math.random() * 3);
     let returnVal = "";
@@ -23,36 +19,51 @@ function getHumanChoice() {
 }
 
 
-function playRound(humanChoice, computerChoice) {
-    console.log(humanChoice)
-    console.log(computerChoice)
-    let result = "";
-    let output = "";
-
-    if (humanChoice == "rock" && computerChoice == "paper") {result = "computerWin"}
-     else if (humanChoice == "scissors" && computerChoice == "rock") {result = "computerWin"}
-      else if (humanChoice == "paper" && computerChoice == "scissors") {result = "computerWin"}
-       else if (humanChoice == "rock" && computerChoice == "scissors") {result = "humanWin"}
-        else if (humanChoice == "scissors" && computerChoice == "paper") {result = "humanWin"}
-         else if (humanChoice == "paper" && computerChoice == "rock") {result = "humanWin"}
-          else {result = "draw"}
-
-    if (result == "computerWin") {output = `You lost! ${computerChoice} beats ${humanChoice}`}
-     else if (result == "humanWin") {output = `You won! ${humanChoice} beats ${computerChoice}`}
-      else if (result == "draw") {output = `Draw! ${humanChoice} cancels out ${computerChoice}`}
-
-    console.log(output)
-
-    if (result == "computerWin") {
-        computerScore++
-    }
-    else if (result == "humanWin") {
-        humanScore++
-    }
-}
-
-
+function playGame() {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
+function playRound(humanChoice, computerChoice) {
+  console.log(humanChoice)
+  console.log(computerChoice)
+  let result = "";
+  let output = "";
+
+  if (humanChoice == "rock" && computerChoice == "paper") {result = "computerWin"}
+   else if (humanChoice == "scissors" && computerChoice == "rock") {result = "computerWin"}
+    else if (humanChoice == "paper" && computerChoice == "scissors") {result = "computerWin"}
+     else if (humanChoice == "rock" && computerChoice == "scissors") {result = "humanWin"}
+      else if (humanChoice == "scissors" && computerChoice == "paper") {result = "humanWin"}
+       else if (humanChoice == "paper" && computerChoice == "rock") {result = "humanWin"}
+        else {result = "draw"}
+
+  if (result == "computerWin") {output = `You lost! ${computerChoice} beats ${humanChoice}`}
+   else if (result == "humanWin") {output = `You won! ${humanChoice} beats ${computerChoice}`}
+    else if (result == "draw") {output = `Draw! ${humanChoice} cancels out ${computerChoice}`}
+
+  console.log(output)
+
+  let humanScore = 0;
+  let computerScore = 0;
+
+  if (result == "computerWin") {computerScore++}
+   else if (result == "humanWin") {humanScore++}
+
+   console.log(humanScore)
+   console.log(computerScore)
+}
 playRound(humanSelection, computerSelection);
+// move playround function and score variables to be defined within this function
+
+// playround to run five times
+    
+// each time playround is ran, score increment is stored
+
+// using greater than operator determine which variable is higher
+
+// display message of winner
+
+   
+}
+
+playGame()
