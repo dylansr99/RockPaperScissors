@@ -20,8 +20,11 @@ function getHumanChoice() {
 
 
 function playGame() {
+// move playround function and score variables to be defined within this function
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
   console.log(humanChoice)
@@ -43,27 +46,38 @@ function playRound(humanChoice, computerChoice) {
 
   console.log(output)
 
-  let humanScore = 0;
-  let computerScore = 0;
-
   if (result == "computerWin") {computerScore++}
    else if (result == "humanWin") {humanScore++}
-
-   console.log(humanScore)
-   console.log(computerScore)
 }
-playRound(humanSelection, computerSelection);
-// move playround function and score variables to be defined within this function
-
-// playround to run five times
-    
-// each time playround is ran, score increment is stored
-
-// using greater than operator determine which variable is higher
-
-// display message of winner
+  playRound(humanSelection, computerSelection);
+  playRound(humanSelection, computerSelection);
+  playRound(humanSelection, computerSelection);
+  playRound(humanSelection, computerSelection);
+  playRound(humanSelection, computerSelection);
+  console.log(humanScore)
+  console.log(computerScore)
 
    
+// playround to run five times
+  
+// each time playround is ran, score increment is stored 
+
+// using greater than operator determine which variable is higher
+let winner = "";
+  if (humanScore > computerScore) {
+    winner = "won"
+  }
+   else if (computerScore > humanScore) {
+    winner = "lost"
+   }
+// display message of winner
+  if (winner == "won") {
+    console.log("Congratulations, you won!")
+  }
+  else if (winner == "lost") {
+    console.log("You lost! Better luck next time!")
+  }
+  
 }
 
 playGame()
