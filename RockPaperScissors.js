@@ -66,21 +66,14 @@ function playRound(humanChoice, computerChoice) {
 // each time playround is ran, score increment is stored 
 
 // using greater than operator determine which variable is higher
-let winner = "";
-  if (humanScore > computerScore) {
-    winner = "won"
-  }
-   else if (computerScore > humanScore) {
-    winner = "lost"
-   }
-// display message of winner
-  if (winner == "won") {
-    console.log("Congratulations, you won!")
-  }
-  else if (winner == "lost") {
-    console.log("You lost! Better luck next time!")
-  }
+let gameResult = "";
+  if (humanScore > computerScore) {gameResult = "won"}
+   else if (computerScore > humanScore) {gameResult = "lost"}
+    else if (computerScore == humanScore) {gameResult = "draw"}
   
+  if (gameResult == "won") {console.log("Congratulations, you won!")}
+   else if (gameResult == "lost") {console.log("You lost! Better luck next time!")}
+    else if (gameResult == "draw") {console.log("Draw! Play again to see who the winner is!")}  
 }
 
 playGame()
