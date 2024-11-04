@@ -26,11 +26,14 @@ const computerSelection = getComputerChoice();
 let humanScore = 0;
 let computerScore = 0;
 
+
+
 function playRound(humanChoice, computerChoice) {
   console.log(humanChoice)
   console.log(computerChoice)
   let result = "";
   let output = "";
+
 
   if (humanChoice == "rock" && computerChoice == "paper") {result = "computerWin"}
    else if (humanChoice == "scissors" && computerChoice == "rock") {result = "computerWin"}
@@ -55,14 +58,11 @@ function playRound(humanChoice, computerChoice) {
   console.log(computerScore)
 }
 
-
   playRound(humanSelection, computerSelection);
   playRound(humanSelection, computerSelection);
   playRound(humanSelection, computerSelection);
   playRound(humanSelection, computerSelection);
   playRound(humanSelection, computerSelection);
-  
-  
 // playround to run five times
   
 // each time playround is ran, score increment is stored 
