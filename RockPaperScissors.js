@@ -14,15 +14,12 @@ function getHumanChoice() {
       if (input == "rock") {returnVal = "rock"}
        else if (input == "paper") {returnVal = "paper"} 
         else if (input == "scissors") {returnVal = "scissors"}
-         else {returnVal = "Please enter valid guess!"}
          return returnVal;
 }
 
 
 function playGame() {
 // move playround function and score variables to be defined within this function
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 let humanScore = 0;
 let computerScore = 0;
 
@@ -58,11 +55,12 @@ function playRound(humanChoice, computerChoice) {
   console.log(computerScore)
 }
 
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  
 // playround to run five times
   
 // each time playround is ran, score increment is stored 
