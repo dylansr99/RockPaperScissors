@@ -38,7 +38,9 @@ function playRound(humanChoice, computerChoice) {
      else if (humanChoice == "rock" && computerChoice == "scissors") {result = "humanWin"}
       else if (humanChoice == "scissors" && computerChoice == "paper") {result = "humanWin"}
        else if (humanChoice == "paper" && computerChoice == "rock") {result = "humanWin"}
-        else {result = "draw"}
+        else if (humanChoice == "rock" && computerChoice == "rock") {result = "draw"}
+         else if (humanChoice == "paper" && computerChoice == "paper") {result = "draw"}
+          else if (humanChoice == "scissors" && computerChoice == "scissors") {result = "draw"}
 
   if (result == "computerWin") {output = `You lost! ${computerChoice} beats ${humanChoice}`}
    else if (result == "humanWin") {output = `You won! ${humanChoice} beats ${computerChoice}`}
@@ -48,16 +50,19 @@ function playRound(humanChoice, computerChoice) {
 
   if (result == "computerWin") {computerScore++}
    else if (result == "humanWin") {humanScore++}
-}
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
+
   console.log(humanScore)
   console.log(computerScore)
+}
 
-   
+
+  playRound(humanSelection, computerSelection);
+  playRound(humanSelection, computerSelection);
+  playRound(humanSelection, computerSelection);
+  playRound(humanSelection, computerSelection);
+  playRound(humanSelection, computerSelection);
+  
+  
 // playround to run five times
   
 // each time playround is ran, score increment is stored 
