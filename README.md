@@ -23,9 +23,16 @@ Print returned value
 
 play round function
 
-Make human choice input case-sensitive so that the whole string is outputted in lowercase even if the input is not
-Determine the winner 
+Determine the winner -
 Print message of whether human user won or didnt win
 Increment either human or computer score based on who won
+
+
+play game function
+move playround function and score variables to be defined within this function
+playround to run five times
+each time playround is ran, score increment is stored
+using greater than operator determine which variable is higher
+display message of winner 
 
                                                                                                                                    
