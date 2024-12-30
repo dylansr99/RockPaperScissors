@@ -43,13 +43,11 @@ function playRound(humanChoice, computerChoice) {
 }
 
 let gameResult = "";
-  if (humanScore > computerScore) {gameResult = "won"}
-   else if (computerScore > humanScore) {gameResult = "lost"}
-    else if (computerScore == humanScore) {gameResult = "draw"}
+  if (humanScore == 5) {gameResult = "won"}
+   else if (computerScore == 5) {gameResult = "lost"}
   
   if (gameResult == "won") {console.log("Congratulations, you won!")}
    else if (gameResult == "lost") {console.log("You lost! Better luck next time!")}
-    else if (gameResult == "draw") {console.log("Draw! Play again to see who the winner is!")}  
 }
 
 playGame()
