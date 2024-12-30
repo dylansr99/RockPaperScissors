@@ -53,13 +53,6 @@ function playRound(humanChoice, computerChoice) {
   console.log(`The computer score is: ${computerScore}`)
 }
 
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  
-
 let gameResult = "";
   if (humanScore > computerScore) {gameResult = "won"}
    else if (computerScore > humanScore) {gameResult = "lost"}
