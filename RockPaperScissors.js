@@ -7,17 +7,6 @@ function getComputerChoice() {
         return returnVal;
 }
 
-
-function getHumanChoice() {
-    let input = prompt("Enter your guess here!").toLowerCase();
-    let returnVal = ""
-      if (input == "rock") {returnVal = "rock"}
-       else if (input == "paper") {returnVal = "paper"} 
-        else if (input == "scissors") {returnVal = "scissors"}
-         return returnVal;
-}
-
-
 function playGame() {
 let humanScore = 0;
 let computerScore = 0;
