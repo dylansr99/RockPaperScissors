@@ -35,4 +35,12 @@ each time playround is ran, score increment is stored
 using greater than operator determine which variable is higher
 display message of winner 
 
-                                                                                                                                   
+
+rps ui
+
+
+create queryselector for button container
+create queryselectors for all buttons
+add eventlistener to button container
+determine which button has been pressed
+call playRound function with the correct button input and getComputerChoice() function
