@@ -11,6 +11,9 @@ function playGame() {
 let humanScore = 0;
 let computerScore = 0;
 
+const rock = document.querySelector("#rock")
+const paper = document.querySelector("#paper")
+const scissors = document.querySelector("#scissors")
 
 function playRound(humanChoice, computerChoice) {
   console.log(humanChoice)
