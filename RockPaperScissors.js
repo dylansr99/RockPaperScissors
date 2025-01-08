@@ -11,9 +11,19 @@ function playGame() {
 let humanScore = 0;
 let computerScore = 0;
 
+
+// create queryselector for button container
+let buttons = document.querySelector('#buttons')
+// create queryselectors for all buttons
 const rock = document.querySelector("#rock")
 const paper = document.querySelector("#paper")
 const scissors = document.querySelector("#scissors")
+
+// add eventlistener to button container
+
+
+// determine which button has been pressed
+// call playRound function with the correct button input and getComputerChoice() function
 
 function playRound(humanChoice, computerChoice) {
   console.log(humanChoice)
