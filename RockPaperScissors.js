@@ -40,6 +40,13 @@ function playRound(humanChoice, computerChoice) {
 let humanScore = 0;
 let computerScore = 0;
 
+let gameResult = "";
+  if (humanScore == 5) {gameResult = "won"}
+   else if (computerScore == 5) {gameResult = "lost"}
+  
+  if (gameResult == "won") {console.log("Congratulations, you won!")}
+   else if (gameResult == "lost") {console.log("You lost! Better luck next time!")}
+
 let buttons = document.querySelector('#buttons')
 buttons.addEventListener('click', playRoundWithButtonInput)
 const rock = document.querySelector("#rock")
@@ -66,13 +73,5 @@ function playRoundWithButtonInput() {
       let computerChoice = getComputerChoice()
   
      playRound(humanChoice, computerChoice)
-    })
-
-let gameResult = "";
-  if (humanScore == 5) {gameResult = "won"}
-   else if (computerScore == 5) {gameResult = "lost"}
-  
-  if (gameResult == "won") {console.log("Congratulations, you won!")}
-   else if (gameResult == "lost") {console.log("You lost! Better luck next time!")}
+    }, { once: true })
 }
-
