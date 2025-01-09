@@ -7,53 +7,36 @@ function getComputerChoice() {
         return returnVal;
 }
 
-function playGame() {
 let humanScore = 0;
 let computerScore = 0;
 
-
-// create queryselector for button container
 let buttons = document.querySelector('#buttons')
-// create queryselectors for all buttons
+buttons.addEventListener('click', playRoundWithButtonInput)
 const rock = document.querySelector("#rock")
 const paper = document.querySelector("#paper")
 const scissors = document.querySelector("#scissors")
 
-// add eventlistener to button container
+function playRoundWithButtonInput() {
+     buttons.addEventListener('click', (event) => {
+      let buttonPressed = ''
 
+       if (event.target === rock) {
+         buttonPressed = 'rock'
+      }
 
-// determine which button has been pressed
-// call playRound function with the correct button input and getComputerChoice() function
+       else if (event.target === paper) {
+          buttonPressed = 'paper'
+       }
 
-function playRound(humanChoice, computerChoice) {
-  console.log(humanChoice)
-  console.log(computerChoice)
-  let result = "";
-  let output = "";
+       else if (event.target === scissors) {
+          buttonPressed = 'scissors'
+       }
 
-
-  if (humanChoice == "rock" && computerChoice == "paper") {result = "computerWin"}
-   else if (humanChoice == "scissors" && computerChoice == "rock") {result = "computerWin"}
-    else if (humanChoice == "paper" && computerChoice == "scissors") {result = "computerWin"}
-     else if (humanChoice == "rock" && computerChoice == "scissors") {result = "humanWin"}
-      else if (humanChoice == "scissors" && computerChoice == "paper") {result = "humanWin"}
-       else if (humanChoice == "paper" && computerChoice == "rock") {result = "humanWin"}
-        else if (humanChoice == "rock" && computerChoice == "rock") {result = "draw"}
-         else if (humanChoice == "paper" && computerChoice == "paper") {result = "draw"}
-          else if (humanChoice == "scissors" && computerChoice == "scissors") {result = "draw"}
-
-  if (result == "computerWin") {output = `You lost! ${computerChoice} beats ${humanChoice}`}
-   else if (result == "humanWin") {output = `You won! ${humanChoice} beats ${computerChoice}`}
-    else if (result == "draw") {output = `Draw! ${humanChoice} cancels out ${computerChoice}`}
-
-  console.log(output)
-
-  if (result == "computerWin") {computerScore++}
-   else if (result == "humanWin") {humanScore++}
-
-  console.log(`Your score is: ${humanScore}.`)
-  console.log(`The computer score is: ${computerScore}`)
-}
+      let humanChoice = buttonPressed;
+      let computerChoice = getComputerChoice()
+  
+     playRound(humanChoice, computerChoice)
+    })
 
 let gameResult = "";
   if (humanScore == 5) {gameResult = "won"}
@@ -63,4 +46,3 @@ let gameResult = "";
    else if (gameResult == "lost") {console.log("You lost! Better luck next time!")}
 }
 
-playGame()
