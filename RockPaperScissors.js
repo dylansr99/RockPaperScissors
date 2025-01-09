@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let ranNumb = Math.floor(Math.random() * 3);
     let returnVal = "";
@@ -35,17 +38,14 @@ function playRound(humanChoice, computerChoice) {
  
    console.log(`Your score is: ${humanScore}.`)
    console.log(`The computer score is: ${computerScore}`)
- }
 
-let humanScore = 0;
-let computerScore = 0;
-
-let gameResult = "";
+   let gameResult = "";
   if (humanScore == 5) {gameResult = "won"}
    else if (computerScore == 5) {gameResult = "lost"}
   
   if (gameResult == "won") {console.log("Congratulations, you won!")}
    else if (gameResult == "lost") {console.log("You lost! Better luck next time!")}
+ }
 
 let buttons = document.querySelector('#buttons')
 buttons.addEventListener('click', playRoundWithButtonInput)
