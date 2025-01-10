@@ -55,17 +55,16 @@ function playRound(humanChoice, computerChoice) {
    computerScoreDisplay.textContent = `The computer score is: ${computerScore}`
    container.appendChild(computerScoreDisplay)
 
-   let gameResult = "";
-  if (humanScore == 5) {gameResult = "won"}
-   else if (computerScore == 5) {gameResult = "lost"}
-  
-  
-
-  if (gameResult == "won") {console.log("Congratulations, you won!")}
-   else if (gameResult == "lost") {console.log("You lost! Better luck next time!")}
-
-
-
+  if (humanScore == 5) {
+      const humanWinner = document.createElement('p')
+      humanWinner.textContent = "Congratulations, you won!"
+      container.appendChild(humanWinner)
+  }
+   else if (computerScore == 5) {
+      const computerWinner = document.createElement('p')
+      computerWinner.textContent = "You lost! Better luck next time!"
+      container.appendChild(computerWinner)
+   }
  }
 
 let buttons = document.querySelector('#buttons')
