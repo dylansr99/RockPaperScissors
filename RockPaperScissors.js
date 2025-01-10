@@ -13,6 +13,15 @@ function getComputerChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
+   
+   const humanChoiceDisplay = document.createElement('p')
+   humanChoiceDisplay.textContent = `You chose ${humanChoice}`
+   container.appendChild(humanChoiceDisplay)
+   
+   const computerChoiceDisplay = document.createElement('p')
+   computerChoiceDisplay.textContent = `Computer chose ${computerChoice}`
+   container.appendChild(computerChoiceDisplay)
+    
    console.log(humanChoice)
    console.log(computerChoice)
    let result = "";
@@ -33,13 +42,15 @@ function playRound(humanChoice, computerChoice) {
     else if (result == "humanWin") {output = `You won! ${humanChoice} beats ${computerChoice}`}
      else if (result == "draw") {output = `Draw! ${humanChoice} cancels out ${computerChoice}`}
  
-   console.log(output)
+   
+   
+     console.log(output)
    
    if (result == "computerWin") {computerScore++}
      else if (result == "humanWin") {humanScore++}
  
-   console.log(`Your score is: ${humanScore}.`)
-   console.log(`The computer score is: ${computerScore}`)
+   `Your score is: ${humanScore}.`
+   `The computer score is: ${computerScore}`
 
    let gameResult = "";
   if (humanScore == 5) {gameResult = "won"}
@@ -79,16 +90,6 @@ function playRoundWithButtonInput() {
       let humanChoice = buttonPressed;
       let computerChoice = getComputerChoice()
 
-      
-        const scoreHuman = document.createElement('p')
-        scoreHuman.textContent = humanScore
-        container.appendChild(scoreHuman)
-
-        const scoreComputer = document.createElement('p')
-        scoreComputer.textContent = computerScore
-        container.appendChild(scoreComputer)
-
-  
      playRound(humanChoice, computerChoice)
     }, { once: true })
 }
