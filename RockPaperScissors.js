@@ -47,9 +47,13 @@ function playRound(humanChoice, computerChoice) {
    if (result == "computerWin") {computerScore++}
      else if (result == "humanWin") {humanScore++}
   
- 
-   `Your score is: ${humanScore}.`
-   `The computer score is: ${computerScore}`
+   const humanScoreDisplay = document.createElement('p')
+   humanScoreDisplay.textContent = `Your score is: ${humanScore}`
+   container.appendChild(humanScoreDisplay)
+
+   const computerScoreDisplay = document.createElement('p')
+   computerScoreDisplay.textContent = `The computer score is: ${computerScore}`
+   container.appendChild(computerScoreDisplay)
 
    let gameResult = "";
   if (humanScore == 5) {gameResult = "won"}
