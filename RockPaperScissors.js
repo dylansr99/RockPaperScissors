@@ -1,3 +1,5 @@
+const container = document.querySelector('#container')
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -32,9 +34,9 @@ function playRound(humanChoice, computerChoice) {
      else if (result == "draw") {output = `Draw! ${humanChoice} cancels out ${computerChoice}`}
  
    console.log(output)
- 
+   
    if (result == "computerWin") {computerScore++}
-    else if (result == "humanWin") {humanScore++}
+     else if (result == "humanWin") {humanScore++}
  
    console.log(`Your score is: ${humanScore}.`)
    console.log(`The computer score is: ${computerScore}`)
@@ -43,8 +45,13 @@ function playRound(humanChoice, computerChoice) {
   if (humanScore == 5) {gameResult = "won"}
    else if (computerScore == 5) {gameResult = "lost"}
   
+  
+
   if (gameResult == "won") {console.log("Congratulations, you won!")}
    else if (gameResult == "lost") {console.log("You lost! Better luck next time!")}
+
+
+
  }
 
 let buttons = document.querySelector('#buttons')
@@ -71,7 +78,20 @@ function playRoundWithButtonInput() {
 
       let humanChoice = buttonPressed;
       let computerChoice = getComputerChoice()
+
+      
+        const scoreHuman = document.createElement('p')
+        scoreHuman.textContent = humanScore
+        container.appendChild(scoreHuman)
+
+        const scoreComputer = document.createElement('p')
+        scoreComputer.textContent = computerScore
+        container.appendChild(scoreComputer)
+
   
      playRound(humanChoice, computerChoice)
     }, { once: true })
 }
+
+
+
