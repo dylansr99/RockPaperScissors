@@ -12,11 +12,11 @@ function getComputerChoice() {
 
 function playRound(humanChoice, computerChoice) {
    
-   const humanChoiceDisplay = document.createElement('p')
+   const humanChoiceDisplay = document.querySelector("#humanChoiceDisplay")
    humanChoiceDisplay.textContent = `You chose ${humanChoice}`
    container.appendChild(humanChoiceDisplay)
    
-   const computerChoiceDisplay = document.createElement('p')
+   const computerChoiceDisplay = document.querySelector("#computerChoiceDisplay")
    computerChoiceDisplay.textContent = `Computer chose ${computerChoice}`
    container.appendChild(computerChoiceDisplay)
     
