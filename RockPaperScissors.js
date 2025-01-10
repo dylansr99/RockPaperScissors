@@ -1,5 +1,3 @@
-const container = document.querySelector('#container')
-
 let humanScore = 0;
 let computerScore = 0;
 
@@ -68,6 +66,7 @@ function playRound(humanChoice, computerChoice) {
    }
  }
 
+const container = document.querySelector('#container')
 let buttons = document.querySelector('#buttons')
 buttons.addEventListener('click', playRoundWithButtonInput)
 const rock = document.querySelector("#rock")
