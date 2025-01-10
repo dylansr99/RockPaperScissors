@@ -22,8 +22,6 @@ function playRound(humanChoice, computerChoice) {
    computerChoiceDisplay.textContent = `Computer chose ${computerChoice}`
    container.appendChild(computerChoiceDisplay)
     
-   console.log(humanChoice)
-   console.log(computerChoice)
    let result = "";
    let output = "";
  
@@ -42,12 +40,13 @@ function playRound(humanChoice, computerChoice) {
     else if (result == "humanWin") {output = `You won! ${humanChoice} beats ${computerChoice}`}
      else if (result == "draw") {output = `Draw! ${humanChoice} cancels out ${computerChoice}`}
  
-   
-   
-     console.log(output)
+   const roundResult = document.createElement('p')
+   roundResult.textContent = output
+   container.appendChild(roundResult)
    
    if (result == "computerWin") {computerScore++}
      else if (result == "humanWin") {humanScore++}
+  
  
    `Your score is: ${humanScore}.`
    `The computer score is: ${computerScore}`
