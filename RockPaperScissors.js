@@ -39,13 +39,14 @@ function playRound(humanChoice, computerChoice) {
    if (result == "computerWin") {output = `You lost! ${computerChoice} beats ${humanChoice}`}
     else if (result == "humanWin") {output = `You won! ${humanChoice} beats ${computerChoice}`}
      else if (result == "draw") {output = `Draw! ${humanChoice} cancels out ${computerChoice}`}
+
+
+     if (result == "computerWin") {computerScore++}
+     else if (result == "humanWin") {humanScore++}
  
    const roundResult = document.createElement('p')
    roundResult.textContent = output
    container.appendChild(roundResult)
-   
-   if (result == "computerWin") {computerScore++}
-     else if (result == "humanWin") {humanScore++}
   
    const humanScoreDisplay = document.createElement('p')
    humanScoreDisplay.textContent = `Your score is: ${humanScore}`
