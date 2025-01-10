@@ -42,27 +42,29 @@ function playRound(humanChoice, computerChoice) {
      if (result == "computerWin") {computerScore++}
      else if (result == "humanWin") {humanScore++}
  
-   const roundResult = document.createElement('p')
+   const roundResult = document.querySelector("#roundResult")
    roundResult.textContent = output
    container.appendChild(roundResult)
   
-   const humanScoreDisplay = document.createElement('p')
+   const humanScoreDisplay = document.querySelector("#humanScoreDisplay")
    humanScoreDisplay.textContent = `Your score is: ${humanScore}`
    container.appendChild(humanScoreDisplay)
 
-   const computerScoreDisplay = document.createElement('p')
+   const computerScoreDisplay = document.querySelector("#computerScoreDisplay")
    computerScoreDisplay.textContent = `The computer score is: ${computerScore}`
    container.appendChild(computerScoreDisplay)
 
   if (humanScore == 5) {
-      const humanWinner = document.createElement('p')
+      const humanWinner = document.querySelector("#humanWinner")
       humanWinner.textContent = "Congratulations, you won!"
       container.appendChild(humanWinner)
+      return
   }
    else if (computerScore == 5) {
-      const computerWinner = document.createElement('p')
+      const computerWinner = document.querySelector("#computerWinner")
       computerWinner.textContent = "You lost! Better luck next time!"
       container.appendChild(computerWinner)
+      return
    }
  }
 
